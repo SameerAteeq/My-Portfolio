@@ -1,0 +1,47 @@
+@import "../../styles/contants.scss";
+
+.wrapper{
+    overflow: hidden;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+        .upperElement{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            
+        }
+        .herolink{
+            @media (max-width:$sm), (max-width:$md) {
+                justify-content: center;
+            }
+            text-align: center;
+            display: flex;
+            text-decoration: none;
+        }
+        
+
+        .person{
+            background-image: url("../splash.png");
+            background-repeat: no-repeat;
+            margin-top: 1rem;
+             background-size: contain;
+            img{
+             @media (max-width:$md) {
+                width: 34rem;
+             }
+             @media (max-width:$sm) {
+                width: 100%;
+                height: 100%;
+             }
+            }
+        }
+        
+    }
+}

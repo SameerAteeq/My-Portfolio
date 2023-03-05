@@ -1,0 +1,35 @@
+@import "../../styles/contants.scss";
+
+.wrapper{
+    background: #fff;
+   position: relative;
+   height: 100%;
+    .aboutMe{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        @media (max-width:$md) {
+            flex-wrap: wrap;
+        }
+        .description{
+            width: 100%;
+           span{
+            line-height: 40px;
+            font-size: 17px;
+           }
+        }
+        .skills{
+            width: 100%;
+            .skillsBar{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 10px;
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
