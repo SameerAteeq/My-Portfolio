@@ -195,6 +195,16 @@ export const SkillsData = [
 
 export const worksData = [
   {
+    id: 33,
+    img: "./showCase7.png",
+    name: "Ecommerce Website",
+    delay: 0.5,
+    duration: 0.6,
+    link: "https://shopieo-web.vercel.app/",
+    description:
+      "This is an Ecommerce Website which is fully responsive and all data is coming from fake Api. This website includes all the feature which ecommerce website required further I will add the Stripe payment,it is created with the React JS and Tailwind CSS. ",
+  },
+  {
     id: 1,
     img: "./showCase1.png",
     name: "Airbnb Clone",

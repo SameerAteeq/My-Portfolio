@@ -1,7 +1,7 @@
 import React from 'react'
 import css from "./work.module.scss";
 import {motion} from "framer-motion"
-import { fadeIn, staggerChildren } from '../../utils/motion';
+import { chilrenVariant, fadeIn, staggerChildren } from '../../utils/motion';
 import { worksData } from '../../utils/data';
 import {AiOutlineEye} from "react-icons/ai"
 
@@ -15,9 +15,9 @@ const Works = () => {
         <a className='anchor' id='work'></a>
         <h1 className='primaryText'>My Latest Works</h1>
         <span className={css.thought}>Following projects showcases my skills and passion to learn coding. Each project is briefly described with demo links. </span>
-        <div className={`${css.showCase}`}>
-        {worksData?.map((item)=>(
-            <motion.div variants={fadeIn("up","tween",item.delay, item.duration )} key={item.id} className={css.showCaseItem} >
+        <motion.div variants={fadeIn("up","tween",0.4, 1)} className={`${css.showCase}`}>
+        {worksData?.map((item,index)=>(
+            <motion.div variants={chilrenVariant} custom={index} key={item.id} className={css.showCaseItem} >
               <div className={css.ImgContainer}>
                 <img src={item.img} alt="project" />
               <a href={item.link} className={css.live} target="_blank">
@@ -31,7 +31,7 @@ const Works = () => {
             </span>
           </motion.div>
           ))}
-         </div>
+         </motion.div>
           
        
 

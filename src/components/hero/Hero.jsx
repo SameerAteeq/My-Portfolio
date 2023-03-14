@@ -3,7 +3,7 @@ import css from "./Hero.module.scss";
 import {AiOutlineArrowDown} from "react-icons/ai"
 import {motion} from "framer-motion"
 import { fadeIn, slideIn, staggerContainer } from '../../utils/motion';
-import resume from "../../../public/resume.pdf"
+import resume from "../../../public/Muhammad_Sameer.pdf"
 
 const Hero = () => {
   return (

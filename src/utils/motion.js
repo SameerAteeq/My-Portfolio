@@ -144,6 +144,22 @@ export const staggerChildren = {
   },
 };
 
+export const chilrenVariant = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  show: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: custom * 0.3,
+      type: "tween",
+      ease: "easeOut",
+    },
+  }),
+};
+
 export const getMenuStyles = (menuOpened) => {
   if (document.documentElement.clientWidth <= 768) {
     return { right: !menuOpened && "-100%" };
