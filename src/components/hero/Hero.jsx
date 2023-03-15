@@ -4,6 +4,8 @@ import {AiOutlineArrowDown} from "react-icons/ai"
 import {motion} from "framer-motion"
 import { fadeIn, slideIn, staggerContainer } from '../../utils/motion';
 import resume from "../../../public/Muhammad_Sameer.pdf"
+import ContentWrapper from '../wrapper/Wrapper';
+
 
 const Hero = () => {
   return (
@@ -11,6 +13,8 @@ const Hero = () => {
          className={` bg-primary paddings ${css.wrapper}`}
     >
       <a className='anchor' id='home'></a>
+      <ContentWrapper>
+
         <motion.div className={`innerWidth ${css.container}`}
         variants={staggerContainer}
         initial="hidden"
@@ -42,6 +46,7 @@ const Hero = () => {
                 <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./Profile.png" alt='' />
             </motion.div>
         </motion.div>
+          </ContentWrapper>
     </section>
   )
 }

@@ -4,8 +4,10 @@ import { SkillsData } from '../../utils/data';
 import css from "./About.module.scss";
 import {motion} from "framer-motion"
 import { fadeIn, headerVariants, slideIn, staggerChildren } from '../../utils/motion';
+import ContentWrapper from '../wrapper/Wrapper';
 const About = () => {
   return (
+    <ContentWrapper>
     <motion.section className={`paddings ${css.wrapper}`}
     variants={staggerChildren}
     initial="hidden"
@@ -13,6 +15,7 @@ const About = () => {
     viewport={{ once: false, amount: 0 }}
     >
       <a className='anchor' id='about'></a>
+
         <motion.h1 variants={slideIn("up", "tween", 0.1 ,.1)} className='primaryText'>About Me</motion.h1>
       <div className={`${css.aboutMe}`}>
 
@@ -38,9 +41,11 @@ const About = () => {
             />
             </div>
             ))}
+
         </motion.div>
       </div>
     </motion.section>
+      </ContentWrapper>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import css from "./contact.module.scss";
 import { toast } from 'react-hot-toast';
+import ContentWrapper from '../wrapper/Wrapper';
 
 const Contact = () => {
   const[loading,setLoading]= useState(false);
@@ -26,6 +27,8 @@ const Contact = () => {
   return (
     <div className={` paddings ${css.wrapper}`}>
         <a className='anchor' id='contact'></a>
+        <ContentWrapper>
+
         <div className={`flexCenter ${css.container}`}>
         <h1 className="primaryText">Get in touch!</h1>
            <span>I am interested in Frontend Development, If you are Looking for a Frontend Developer feel free to contact me.. </span>
@@ -46,6 +49,7 @@ const Contact = () => {
             <input type="submit" value={loading?"Loading...":"Send Message"} className='btn' />
          </form>
         </div>
+        </ContentWrapper>
     </div>
   )
 }

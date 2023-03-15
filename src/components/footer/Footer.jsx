@@ -4,10 +4,13 @@ import {GrLinkedinOption} from "react-icons/gr"
 import {FaFacebookF} from "react-icons/fa"
 import {AiOutlineCopyrightCircle} from "react-icons/ai"
 import css from "./footer.module.scss";
+import ContentWrapper from '../wrapper/Wrapper'
 
 const Footer = () => {
   return (
     <footer className={`paddings ${css.wrapper}`}>
+        <ContentWrapper>
+
         <div className={`flexCenter ${css.container}`}>
             <div className={css.icons}>
 
@@ -29,6 +32,7 @@ const Footer = () => {
                 <span>2023</span>
             </div>
         </div>
+        </ContentWrapper>
     </footer>
   )
 }

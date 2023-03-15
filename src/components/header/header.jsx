@@ -4,6 +4,7 @@ import {motion} from "framer-motion"
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles, headerVariants } from '../../utils/motion';
 import useHeaderShadow from '../../hooks/useHeaderShadow';
+import ContentWrapper from '../wrapper/Wrapper';
 const Header = () => {
   const[menuOpened,setMenuOpened]= useState(false);
   const headerShadow = useHeaderShadow()
@@ -17,31 +18,34 @@ const Header = () => {
     className={`bg-primary paddings ${css.wrapper}`}
     style={{boxShadow:headerShadow}}
     >
-      <div className={`flexCenter innerWidth ${css.container}`}>
-          <div className={css.name}>
-            <a href='#home'>
-              Muhammad Sameer
-            </a>
-          </div>
-          <ul 
-          className={`flexCenter ${css.menu}`}
-           style={getMenuStyles(menuOpened)}
-          >
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <ContentWrapper>
 
-          {/* For small and medium devices.. */}
+        <div className={`flexCenter innerWidth ${css.container}`}>
+            <div className={css.name}>
+              <a href='#home'>
+                Muhammad Sameer
+              </a>
+            </div>
+            <ul 
+            className={`flexCenter ${css.menu}`}
+            style={getMenuStyles(menuOpened)}
+            >
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
 
-          <div className={css.menuIcon}
-          onClick={()=>setMenuOpened(!menuOpened)}
-          >
-            <BiMenuAltRight size={30}/>
-          </div>
+            {/* For small and medium devices.. */}
 
-      </div>
+            <div className={css.menuIcon}
+            onClick={()=>setMenuOpened(!menuOpened)}
+            >
+              <BiMenuAltRight size={30}/>
+            </div>
+
+        </div>
+      </ContentWrapper>
     </motion.div>
   )
 }
