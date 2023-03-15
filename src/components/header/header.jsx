@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import css from "./header.module.scss";
 import {motion} from "framer-motion"
 import { BiMenuAltRight } from "react-icons/bi";
+import { IoMdClose } from "react-icons/io";
 import { getMenuStyles, headerVariants } from '../../utils/motion';
 import useHeaderShadow from '../../hooks/useHeaderShadow';
 import ContentWrapper from '../wrapper/Wrapper';
@@ -41,7 +42,7 @@ const Header = () => {
             <div className={css.menuIcon}
             onClick={()=>setMenuOpened(!menuOpened)}
             >
-              <BiMenuAltRight size={30}/>
+              {menuOpened? <IoMdClose size={30}/>: <BiMenuAltRight size={30}/>}
             </div>
 
         </div>

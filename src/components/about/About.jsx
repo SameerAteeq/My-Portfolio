@@ -7,15 +7,15 @@ import { fadeIn, headerVariants, slideIn, staggerChildren } from '../../utils/mo
 import ContentWrapper from '../wrapper/Wrapper';
 const About = () => {
   return (
-    <ContentWrapper>
+
     <motion.section className={`paddings ${css.wrapper}`}
     variants={staggerChildren}
     initial="hidden"
     whileInView="show"
     viewport={{ once: false, amount: 0 }}
     >
+      {/* <ContentWrapper> */}
       <a className='anchor' id='about'></a>
-
         <motion.h1 variants={slideIn("up", "tween", 0.1 ,.1)} className='primaryText'>About Me</motion.h1>
       <div className={`${css.aboutMe}`}>
 
@@ -41,11 +41,11 @@ const About = () => {
             />
             </div>
             ))}
-
         </motion.div>
       </div>
+      {/* </ContentWrapper> */}
     </motion.section>
-      </ContentWrapper>
+
   )
 }
 
